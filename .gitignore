@@ -54,3 +54,6 @@ ENV/
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+
+js_repos/node_modules
