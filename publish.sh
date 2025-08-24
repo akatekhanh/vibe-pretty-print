@@ -129,7 +129,7 @@ if ! npm whoami &> /dev/null; then
 fi
 
 # Check if user is logged in to PyPI
-if ! twine whoami &> /dev/null; then
+if ! cd python_repos && twine check dist/* &> /dev/null; then
     echo -e "${RED}Error: Not logged in to PyPI. Run 'twine login' first.${NC}"
     exit 1
 fi
