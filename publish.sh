@@ -10,7 +10,7 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}Starting publish process for vibe-pretty-print...${NC}"
 
-Check if we're on main branch
+# Check if we're on main branch
 CURRENT_BRANCH=$(git branch --show-current)
 if [ "$CURRENT_BRANCH" != "main" ]; then
     echo -e "${RED}Error: Must be on main branch to publish. Current branch: $CURRENT_BRANCH${NC}"
