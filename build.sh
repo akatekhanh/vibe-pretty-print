@@ -44,7 +44,7 @@ build_python() {
     rm -rf dist/ build/ *.egg-info/
     
     # Build package
-    python -m build
+    python -m build --outdir dist/
     
     # Validate package
     if command -v twine >/dev/null 2>&1; then
@@ -52,6 +52,10 @@ build_python() {
     else
         warn "twine not found, skipping validation"
     fi
+    
+    # Run tests
+    log "Running Python tests..."
+    pytest tests/ -v
     
     success "Python package built successfully"
     echo "Files created:"
@@ -74,7 +78,7 @@ build_js() {
     fi
     
     # Run tests
-    log "Running tests..."
+    log "Running JavaScript tests..."
     npm test
     
     # Dry run to validate package

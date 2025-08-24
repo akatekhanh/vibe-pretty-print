@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vibe-pretty-print"
-version = "0.1.1"
+version = "0.1.2"
 description = "A smart formatting library for JSON, XML, YAML, and text with OpenAI integration"
 readme = "README.md"
 requires-python = ">=3.7"
@@ -48,7 +48,7 @@ Repository = "https://github.com/akatekhanh/vibe-pretty-print"
 Issues = "https://github.com/akatekhanh/vibe-pretty-print/issues"
 
 [tool.setuptools]
-packages = ["vibe_pprint"]
+packages = ["vibe_pretty_print"]
 
 [tool.setuptools.package-data]
 "*" = ["LICENSE"]
