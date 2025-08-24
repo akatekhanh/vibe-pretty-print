@@ -10,14 +10,14 @@ NC='\033[0m' # No Color
 
 echo -e "${GREEN}Starting publish process for vibe-pretty-print...${NC}"
 
-# Check if we're on main branch
+Check if we're on main branch
 CURRENT_BRANCH=$(git branch --show-current)
 if [ "$CURRENT_BRANCH" != "main" ]; then
     echo -e "${RED}Error: Must be on main branch to publish. Current branch: $CURRENT_BRANCH${NC}"
     exit 1
 fi
 
-# Check if working directory is clean
+Check if working directory is clean
 if [ -n "$(git status --porcelain)" ]; then
     echo -e "${RED}Error: Working directory must be clean. Please commit or stash changes.${NC}"
     git status
